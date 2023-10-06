@@ -5,6 +5,7 @@ import Footer from 'components/Footer';
 import Header from 'components/Header';
 
 import { StyledMain } from './styles';
+import Loading from 'components/Loading';
 
 // Лояут для lazy лоада
 const LazyLayout: FC = () => (
@@ -12,7 +13,7 @@ const LazyLayout: FC = () => (
     <Header />
 
     <StyledMain>
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<Loading />}>
         <Outlet />
       </Suspense>
     </StyledMain>
