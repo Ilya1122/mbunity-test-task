@@ -12,6 +12,12 @@ const Blog = lazy(() => import('pages/Blog'));
 const About = lazy(() => import('pages/About'));
 const NotFound = lazy(() => import('pages/NotFound'));
 
+// I import the necessary libraries and components for working with React and routing
+// Set the paths to different pages of my application in a separate file path.ts
+// Use the "lazy loading" technique to asynchronously load components when they are needed
+// I put all pages in the Layout component to have a single layout for all pages
+// If the user enters an invalid path, a NotFound component is displayed, which is also loaded asynchronously if necessary
+
 const AppRouter: FC = () => (
   <Routes>
     <Route path={PAGES_PATH.MAIN} element={<Layout />}>

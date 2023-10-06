@@ -13,7 +13,9 @@ const HeaderMobileTitle: FC<HeaderMobileTitleProps> = ({
   handleChangeOpen,
 }) => (
   <StyledContainer>
-    <Logo to={PAGES_PATH.MAIN}>Logo Here</Logo>
+    <Logo onClick={handleChangeOpen} to={PAGES_PATH.MAIN}>
+      Logo Here
+    </Logo>
 
     <StyledIconButton onClick={handleChangeOpen}>
       <CloseIcon />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import MainLayout from 'components/Layouts/MainLayout';
 
@@ -7,7 +7,7 @@ import ContactForm from './ContactForm';
 
 import { StyledContainer } from './styles';
 
-const Contact = () => (
+const Contact: FC = () => (
   <MainLayout
     title="Contact Us"
     description="Any question or remarks? Just write us a message!"

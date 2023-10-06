@@ -1,44 +1,43 @@
 import { styled } from '@mui/material/styles';
-
 import Input from 'components/UI/Input';
 
-export const StyledInput = styled(Input)`
-  width: 45%;
-  max-width: 278px;
+export const StyledInput = styled(Input)(({ theme }) => ({
+  width: '45%',
+  maxWidth: '278px',
 
-  @media (max-width: 900px) {
-    width: 100%;
-    max-width: 700px;
-  }
+  '@media (max-width: 900px)': {
+    width: '100%',
+    maxWidth: '700px',
+  },
 
-  input::placeholder {
-    color: ${({ theme }) => theme.palette.text.secondary};
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-  }
+  '& label.Mui-focused': {
+    color: theme.palette.common.black,
+  },
 
-  .MuiFormLabel-root {
-    color: ${({ theme }) => theme.palette.text.secondary};
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-  }
+  '& input::placeholder': {
+    color: theme.palette.text.secondary,
+    fontSize: '14px',
+    fontStyle: 'normal',
+    fontWeight: '500',
+    lineHeight: '20px',
+  },
 
-  & .MuiOutlinedInput-root {
-    background-color: ${({ theme }) => theme.palette.grey[100]};
-    border-radius: 4px 0 0 4px;
-    color: ${({ theme }) => theme.palette.common.black};
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    height: 39px;
-  }
+  '& .MuiFormLabel-root': {
+    color: theme.palette.text.secondary,
+    fontSize: '12px',
+    fontStyle: 'normal',
+    fontWeight: '500',
+    lineHeight: '20px',
+  },
 
-  && {
-    outline: none;
-  }
-`;
+  '& .MuiOutlinedInput-root': {
+    backgroundColor: theme.palette.grey[100],
+    borderRadius: '4px 0 0 4px',
+    color: theme.palette.common.black,
+    fontSize: '14px',
+    fontStyle: 'normal',
+    fontWeight: '500',
+    lineHeight: '20px',
+    height: '39px',
+  },
+}));

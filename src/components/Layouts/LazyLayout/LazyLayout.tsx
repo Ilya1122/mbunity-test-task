@@ -7,7 +7,9 @@ import Header from 'components/Header';
 import { StyledMain } from './styles';
 import Loading from 'components/Loading';
 
-// Лояут для lazy лоада
+// component, LazyLayout, is responsible for placing the main content of your application.
+// It uses lazy loading and fragments to optimize the loading and display of components
+
 const LazyLayout: FC = () => (
   <Fragment>
     <Header />

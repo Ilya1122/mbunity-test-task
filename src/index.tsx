@@ -17,12 +17,17 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
+    {/* use it to wrap your entire application to provide routing */}
     <BrowserRouter>
-      {/* додав тему для проекта та скинув стилі браузера */}
+      {/* I use this component to transfer the theme to your program */}
       <ThemeProvider theme={theme}>
+        {/* reset styles to default values to avoid style conflicts between browsers */}
         <CssBaseline />
+
+        {/* I use global styles */}
         <GlobalStyles styles={globalCss} />
 
+        {/* main router */}
         <AppRouter />
       </ThemeProvider>
     </BrowserRouter>

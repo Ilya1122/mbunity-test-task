@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import { ReactComponent as RadioIcon } from 'assets/icons/radioIcon.svg';
 import { ReactComponent as RadioCheckedIcon } from 'assets/icons/radioCheckedIcon.svg';
@@ -9,7 +9,7 @@ import {
   StyledRadio,
 } from './styles';
 
-const RadioButtons = () => (
+const RadioButtons: FC = () => (
   <StyledRadioGroup row id="subject">
     <StyledFormControlLabel
       value="inquiry1"
@@ -36,7 +36,7 @@ const RadioButtons = () => (
     />
 
     <StyledFormControlLabel
-      value="inquiry3"
+      value="inquiry4"
       control={
         <StyledRadio icon={<RadioIcon />} checkedIcon={<RadioCheckedIcon />} />
       }

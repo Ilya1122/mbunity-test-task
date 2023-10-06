@@ -4,8 +4,14 @@ import HeaderLinkList from 'components/Header/HeaderLinkList';
 
 import { StyledNavigation } from './styles';
 
-const HeaderMobileLinksList: FC = () => (
-  <StyledNavigation>
+interface HeaderMobileLinksListProps {
+  handleChangeOpen: () => void;
+}
+
+const HeaderMobileLinksList: FC<HeaderMobileLinksListProps> = ({
+  handleChangeOpen,
+}) => (
+  <StyledNavigation onClick={handleChangeOpen}>
     <HeaderLinkList />
   </StyledNavigation>
 );

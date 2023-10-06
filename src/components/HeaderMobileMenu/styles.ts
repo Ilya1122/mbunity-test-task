@@ -4,6 +4,7 @@ export const StyledContainer = styled('div')`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   height: 100%;
   background-color: ${({ theme }) => theme?.palette?.common?.black};
   padding: 29px 20px;
@@ -37,4 +38,10 @@ export const StyledEllipse = styled('div')`
   &:hover {
     opacity: 0.5;
   }
+`;
+
+export const StyledWrapper = styled('div')`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 `;

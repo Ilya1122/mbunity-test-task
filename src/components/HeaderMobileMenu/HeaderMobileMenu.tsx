@@ -6,7 +6,12 @@ import { ReactComponent as CartIcon } from 'assets/icons/cart.svg';
 import HeaderMobileTitle from './HeaderMobileTitle';
 import HeaderMobileLinksList from './HeaderMobileLinksList';
 
-import { StyledContainer, StyledWrapperIcons, StyledEllipse } from './styles';
+import {
+  StyledContainer,
+  StyledWrapperIcons,
+  StyledEllipse,
+  StyledWrapper,
+} from './styles';
 
 interface HeaderMobileMenuProps {
   handleChangeOpen: () => void;
@@ -14,9 +19,11 @@ interface HeaderMobileMenuProps {
 
 const HeaderMobileMenu: FC<HeaderMobileMenuProps> = ({ handleChangeOpen }) => (
   <StyledContainer>
-    <HeaderMobileTitle handleChangeOpen={handleChangeOpen} />
+    <StyledWrapper>
+      <HeaderMobileTitle handleChangeOpen={handleChangeOpen} />
 
-    <HeaderMobileLinksList />
+      <HeaderMobileLinksList handleChangeOpen={handleChangeOpen} />
+    </StyledWrapper>
 
     <StyledWrapperIcons>
       <StyledEllipse>
